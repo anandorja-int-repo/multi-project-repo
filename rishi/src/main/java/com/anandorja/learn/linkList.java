@@ -1,10 +1,11 @@
-import java.util.List;
+package com.anandorja.learn;
+
 import java.util.LinkedList;
 
 class linkList {
 
     public static void main(String[] args) {
-        LinkedList<Integer> numbers = new LinkedList<>();
+        LinkedList<Integer> numbers = new LinkedList<Integer>();
 
         for(int i = 1; i <= 1000; ++i){
             numbers.add(i);

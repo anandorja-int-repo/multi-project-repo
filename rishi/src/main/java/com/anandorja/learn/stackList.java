@@ -1,8 +1,10 @@
+package com.anandorja.learn;
+
 import java.util.Stack;
 
 class stackList {
     public static void main(String[] args) {
-        Stack<Integer> numbers= new Stack<>();
+        Stack<Integer> numbers= new Stack<Integer>();
 
         for(int i = 1; i <= 1000; ++i){
             numbers.push(i);
