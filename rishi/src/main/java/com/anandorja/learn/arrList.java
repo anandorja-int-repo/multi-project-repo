@@ -5,7 +5,7 @@ import java.util.ArrayList;
 class arrList {
 
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        ArrayList<Integer> numbers = new ArrayList<>();
 
         for(int i = 1; i <= 1000; ++i){
             numbers.add(i);

@@ -4,7 +4,7 @@ import java.util.Stack;
 
 class stackList {
     public static void main(String[] args) {
-        Stack<Integer> numbers= new Stack<Integer>();
+        Stack<Integer> numbers= new Stack<>();
 
         for(int i = 1; i <= 1000; ++i){
             numbers.push(i);
