@@ -1,4 +1,4 @@
-package com.anandorja.learn.Bharath;
+package com.anandorja.learn;
 
 public interface IStack {
 
