@@ -5,7 +5,7 @@ import java.util.LinkedList;
 class linkList {
 
     public static void main(String[] args) {
-        LinkedList<Integer> numbers = new LinkedList<Integer>();
+        LinkedList<Integer> numbers = new LinkedList<>();
 
         for(int i = 1; i <= 1000; ++i){
             numbers.add(i);
