@@ -8,7 +8,6 @@ public class StackUsingArrayList implements IStack {
     List<Integer> stackList;
 
     StackUsingArrayList() {
-
         stackList = new ArrayList<>();
     }
 
@@ -24,7 +23,6 @@ public class StackUsingArrayList implements IStack {
     public static void main(String[] args) {
         StackUsingArrayList myStack = new StackUsingArrayList();
         myStack.push(5);
-        ;
         myStack.push(4);
         myStack.push(12);
         myStack.push(29);
@@ -44,45 +42,8 @@ public class StackUsingArrayList implements IStack {
         System.out.println(myStack.peek());
         System.out.println(myStack.pop());
 
-
-
-//    }
-
-
     }
 
-//	@Override
-//	public void Push(int value) {
-//		stackList.add(value);
-//	}
-//
-//	@Override
-//	public int Pop() {
-//
-//		if (!isEmpty()) {
-//            int popValue = stackList.get(stackList.size() - 1);
-//            stackList.remove(stackList.size() - 1);
-//            return popValue;
-//        } else {
-//            System.out.print("The stack is already empty  ");
-//            return -1;
-//        }
-//
-//
-//	}
-//
-//	@Override
-//	public int PEEK() {
-//
-//		return stackList.get(stackList.size() - 1);
-//
-//
-//	}
-
-//    @Override
-//    public int Peek() {
-//       return stackList.get(stackList.size() - 1);
-//    }
 
     @Override
     public void push(int value) {
