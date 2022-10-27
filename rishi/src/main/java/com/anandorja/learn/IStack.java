@@ -1,7 +1,6 @@
 package com.anandorja.learn;
 
-public interface stackInterface {
-    public String toString();
+public interface StackInterface {
     void push(Integer value);
     Integer peek();
     Integer pop();

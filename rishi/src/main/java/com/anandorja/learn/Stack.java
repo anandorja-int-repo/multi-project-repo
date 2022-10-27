@@ -1,23 +1,28 @@
 package com.anandorja.learn;
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 
-class stackImplement implements stackInterface {
+class stackImplement implements StackInterface {
     private ArrayList<Integer> elements = new ArrayList<>();
+    @Override
     public String toString() {
 		return ""+elements;
 	}
+    @Override
     public void push(Integer value){
         elements.add(value);
     }
+    @Override
     public Integer peek() {
 		if (elements.isEmpty()) {
-			return null;
+			throw new EmptyStackException();
 		}
 		return elements.get(elements.size() - 1);
 	}
+    @Override
     public Integer pop() {
 		if (elements.isEmpty()) {
-			return null;
+            throw new EmptyStackException();
 		}
 		int top = elements.get(elements.size() - 1);
 		elements.remove(elements.size() - 1);
