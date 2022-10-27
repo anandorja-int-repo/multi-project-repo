@@ -1,137 +1,110 @@
 package com.anandorja.learn;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
-public class List implements listInterface{
-    listInterface ls = new listInterface() {
-        @Override
-        public Iterator iterator() {
-            return null;
-        }
-
-        @Override
-        public void insert(int index, Object value) throws IndexOutOfBoundsException {
-
-        }
-
-        @Override
-        public void add(Object value) {
-
-        }
-
-        @Override
-        public Object delete(int index) throws IndexOutOfBoundsException {
-            return null;
-        }
-
-        @Override
-        public boolean delete(Object value) {
-            return false;
-        }
-
-        @Override
-        public void clear() {
-
-        }
-
-        @Override
-        public Object set(int index, Object value) throws IndexOutOfBoundsException {
-            return null;
-        }
-
-        @Override
-        public Object get(int index) throws IndexOutOfBoundsException {
-            return null;
-        }
-
-        @Override
-        public int indexOf(Object value) {
-            return 0;
-        }
-
-        @Override
-        public boolean contains(Object value) {
-            return false;
-        }
-
-        @Override
-        public int size() {
-            return 0;
-        }
-
-        @Override
-        public boolean isEmpty() {
-            return false;
-        }
-    };
-    public static void main(String[] args) {
-        List lm = new List();
-        lm.add(12);
-        Iterator i = lm.iterator();
-        for (i.first(); !i.isDone(); i.next()) {
-            System.out.println(lm.current());
-        }
-    }
-    public String toString() {
-        return ""+ls;
-    }
+public class ArrList implements IList {
+    Object[] holder = new Object[3];
+    private int size = 0;
     @Override
     public void insert(int index, Object value) throws IndexOutOfBoundsException {
-
+        Object[] temp = new Object[size+1];
+        for(int i = 0; i < index; ++i ){
+            temp[i] = holder[i];
+        }
+        temp[index] = value;
+        for(int j = index + 1; j <= size; ++j )
+        {
+            temp[j] = holder[j-1];
+        }
+        holder = temp;
     }
 
     @Override
     public void add(Object value) {
-        ls.add(value);
+        if(size == holder.length){
+            Object[] temp = new Object[2*size];
+            for(int i = 0; i < size; ++i ){
+                temp[i] = holder[i];
+            }
+            holder = temp;
+        }
+        holder[size++] = value;
     }
 
     @Override
     public Object delete(int index) throws IndexOutOfBoundsException {
-        return null;
+        Object del = holder[index];
+        for(int i = index; i < size-1; ++i){
+            holder[i] = holder[i + 1];
+        }
+        holder[--size] = null;
+        return del;
     }
 
-    @Override
+    /**@Override
     public boolean delete(Object value) {
+        for(int i = 0; i < size; ++i){
+            if(holder[i] == value){
+                for(int j = i; i < size-1; ++i){
+                    holder[i] = holder[i + 1];
+                }
+                holder[--size] = null;
+                return true;
+            }
+        }
         return false;
-    }
+    }*/
 
     @Override
     public void clear() {
-
+        holder = new Object[15];
+        size = 0;
     }
 
     @Override
     public Object set(int index, Object value) throws IndexOutOfBoundsException {
-        return null;
+        holder[index] = value;
+        return true;
     }
 
     @Override
     public Object get(int index) throws IndexOutOfBoundsException {
-        return null;
+        return holder[index];
     }
 
     @Override
     public int indexOf(Object value) {
-        return 0;
+        for(int i = 0; i < size; i++){
+            if( holder[i] == value){
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public boolean contains(Object value) {
+        for(int i = 0; i < size; i++){
+            if( holder[i] == value){
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
     public Iterator iterator() {
-        return null;
+        return new ArrayIteratorSimple(holder);
     }
 }

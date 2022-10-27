@@ -2,7 +2,7 @@ package com.anandorja.learn;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-class stackImplement implements StackInterface {
+class Stack implements IStack {
     private ArrayList<Integer> elements = new ArrayList<>();
     @Override
     public String toString() {
@@ -31,7 +31,7 @@ class stackImplement implements StackInterface {
 
     public static void main(String[] args) {
         
-        stackImplement numbers = new stackImplement();
+        Stack numbers = new Stack();
         for(Integer i = 2; i <= 20; i = i+2){
             numbers.push(i);
         }
