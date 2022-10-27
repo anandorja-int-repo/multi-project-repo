@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class ArrListTest extends TestCase {
 
-    ArrList arr = new ArrList();
+    IList arr = new LinkedList();
 
     public void testAdd() {
         for(int val = 0; val < 4; ++val){
@@ -39,7 +39,7 @@ public class ArrListTest extends TestCase {
             arr.add(val);
         }
         arr.insert(2,5);
-        assertEquals(5,arr.holder[2]);
+        assertEquals(5,arr.get(2));
     }
 
     public void testSet() {
@@ -47,7 +47,7 @@ public class ArrListTest extends TestCase {
             arr.add(val);
         }
         arr.set(1,5);
-        assertEquals(5,arr.holder[1]);
+        assertEquals(5,arr.get(1));
     }
 
     public void testGet() {

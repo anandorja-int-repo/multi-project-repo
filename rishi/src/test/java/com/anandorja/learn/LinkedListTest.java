@@ -39,8 +39,8 @@ public class LinkedListTest extends TestCase {
         for(int val = 0; val < 4; ++val){
             arr.add(val);
         }
-        arr.insert(1,5);
-        assertEquals(5,arr.get(1));
+        arr.insert(2,5);
+        assertEquals(5,arr.get(2));
     }
 
     public void testSet() {

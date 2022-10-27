@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrList implements IList {
-    Object[] holder = new Object[3];
+    private Object[] holder = new Object[3];
     private int size = 0;
     @Override
     public void insert(int index, Object value) throws IndexOutOfBoundsException {
