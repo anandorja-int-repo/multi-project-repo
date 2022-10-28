@@ -38,8 +38,8 @@ public class ArrListTest extends TestCase {
         for(int val = 0; val < 4; ++val){
             arr.add(val);
         }
-        arr.insert(2,5);
-        assertEquals(5,arr.get(2));
+        arr.insert(3,5);
+        assertEquals(5,arr.get(3));
     }
 
     public void testSet() {

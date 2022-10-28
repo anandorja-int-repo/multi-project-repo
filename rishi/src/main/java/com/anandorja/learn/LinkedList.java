@@ -21,7 +21,7 @@ public class LinkedList implements IList{
     @Override
     public void insert(int index, Object value) throws IndexOutOfBoundsException {
         Node newNode = new Node(value);
-        if(index >= this.size){
+        if(index >= this.size && index < 0){
             throw new IndexOutOfBoundsException();
         }
         if (index == 0) {
@@ -30,19 +30,33 @@ public class LinkedList implements IList{
             ++size;
             return;
         }
-        if(index < size)
+        else
         {
             int position = 0;
             Node current = head;
-            while(current != null){
+            Node previous = head;
+            while (current != null) {
+                if (index == position) {
+                    newNode.next =  current;
+                    previous.next = newNode;
+                    ++size;
+                    break;
+                }
+                if (position != 0) {
+                    previous = previous.next;
+                }
+                current = current.next;
+                ++position;
+            }
+            /**while(current != null){
                 if(position == index){
                     newNode.next = current.next;
                     current.next = newNode;
                     ++size;
                     return;
                 }
-                ++position;
-            }
+                ++position;*/
+
         }
 
     }

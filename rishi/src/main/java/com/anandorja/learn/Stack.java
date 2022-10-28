@@ -3,7 +3,8 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 class Stack implements IStack {
-    private ArrayList<Integer> elements = new ArrayList<>();
+    //private ArrayList<Integer> elements = new ArrayList<>();
+    private ArrList elements = new ArrList();
     @Override
     public String toString() {
 		return ""+elements;
@@ -13,19 +14,19 @@ class Stack implements IStack {
         elements.add(value);
     }
     @Override
-    public Integer peek() {
+    public Object peek() {
 		if (elements.isEmpty()) {
 			throw new EmptyStackException();
 		}
 		return elements.get(elements.size() - 1);
 	}
     @Override
-    public Integer pop() {
+    public Object pop() {
 		if (elements.isEmpty()) {
             throw new EmptyStackException();
 		}
-		int top = elements.get(elements.size() - 1);
-		elements.remove(elements.size() - 1);
+		Object top = elements.get(elements.size() - 1);
+		elements.delete(elements.size() - 1);
 		return top;
 	}
 
