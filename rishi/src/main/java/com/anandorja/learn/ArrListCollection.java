@@ -2,7 +2,7 @@ package com.anandorja.learn;
 
 import java.util.ArrayList;
 
-class arrList {
+class ArrListCollection {
 
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>();

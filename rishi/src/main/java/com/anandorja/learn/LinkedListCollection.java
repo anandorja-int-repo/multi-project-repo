@@ -2,7 +2,7 @@ package com.anandorja.learn;
 
 import java.util.LinkedList;
 
-class linkList {
+class LinkedListCollection {
 
     public static void main(String[] args) {
         LinkedList<Integer> numbers = new LinkedList<>();

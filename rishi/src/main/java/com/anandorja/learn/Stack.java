@@ -1,32 +1,38 @@
 package com.anandorja.learn;
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 
-class stackImplement implements stackInterface {
-    private ArrayList<Integer> elements = new ArrayList<>();
+class Stack implements IStack {
+    //private ArrayList<Integer> elements = new ArrayList<>();
+    private ArrList elements = new ArrList();
+    @Override
     public String toString() {
 		return ""+elements;
 	}
+    @Override
     public void push(Integer value){
         elements.add(value);
     }
-    public Integer peek() {
+    @Override
+    public Object peek() {
 		if (elements.isEmpty()) {
-			return null;
+			throw new EmptyStackException();
 		}
 		return elements.get(elements.size() - 1);
 	}
-    public Integer pop() {
+    @Override
+    public Object pop() {
 		if (elements.isEmpty()) {
-			return null;
+            throw new EmptyStackException();
 		}
-		int top = elements.get(elements.size() - 1);
-		elements.remove(elements.size() - 1);
+		Object top = elements.get(elements.size() - 1);
+		elements.delete(elements.size() - 1);
 		return top;
 	}
 
     public static void main(String[] args) {
         
-        stackImplement numbers = new stackImplement();
+        Stack numbers = new Stack();
         for(Integer i = 2; i <= 20; i = i+2){
             numbers.push(i);
         }

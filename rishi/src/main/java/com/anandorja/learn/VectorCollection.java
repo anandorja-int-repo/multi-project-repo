@@ -2,7 +2,7 @@ package com.anandorja.learn;
 
 import java.util.Vector;
 
-class vectorList {
+class VectorCollection {
     public static void main(String[] args) {
         Vector<Integer> numbers= new Vector<>();
 
