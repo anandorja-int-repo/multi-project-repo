@@ -4,7 +4,7 @@ package BasicLogicProgram;
 public class BasicProgram {
 
 
-    public double floatNumber(float numberA, float numberB) {
+    public int  floatNumber(int  numberA, int  numberB) {
 
         return numberA * numberB;
     }
@@ -153,8 +153,28 @@ public class BasicProgram {
             n2=n3;
         }
 
-        return n1;
+        return n2;
     }
+
+    public int simpleIntrest(int p, int t,int r){
+        int SI = p*t*r/100;;
+        return SI;
+    }
+
+    public int compoundIntrest(int p,int t, int r){
+        int amount ;
+        amount = p * (1+r/100)^t;
+        return amount;
+
+    }
+
+    public int primeter(int lenght , int breath){
+        int c = 2*(lenght + breath);
+        return  c;
+    }
+
+
+
 
 
 }
