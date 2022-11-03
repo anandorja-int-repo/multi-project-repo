@@ -1,9 +1,6 @@
 package com.anandorja.learn;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Scanner;
 
 public class FileReadWrite {
@@ -21,6 +18,26 @@ public class FileReadWrite {
             Scanner read = new Scanner(file1);
             System.out.println(read.nextLine());
             read.close();
+
+            // coping the file
+            System.out.println("Enter the file with its path and extension name:");
+            String filePath2 = br.readLine();
+            File file2 = new File(filePath2);
+            FileInputStream in = new FileInputStream(file1);
+            FileOutputStream out = new FileOutputStream(file2);
+            int n;
+            while ((n = in.read()) != -1) {
+                out.write(n);
+            }
+            out.close();
+            in.close();
+
+            /** // to append a existing file
+             BufferedWriter out = new BufferedWriter(
+             new FileWriter(fileName, true));
+             out.write(str);
+             out.close();
+             */
 
             /** to rename a file  , returns true if the filename is renamed
             File file = new File("/home/mayur/Folder/GFG.java");
