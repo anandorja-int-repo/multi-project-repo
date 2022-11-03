@@ -7,14 +7,15 @@ class DynamicArray implements ListDemo {
     private int size;
     private int capacity;
 
-    private final int intialCapacity;
+    private final int initialCapacity;
 
     DynamicArray() {
         size = 0;
-        intialCapacity = 8;
-        arr = new Object[intialCapacity];
-        capacity = intialCapacity;
+        initialCapacity = 8;
+        arr = new Object[initialCapacity];
+        capacity = initialCapacity;
     }
+
     public void insert(int index, Object value) {
 
         if (size >= arr.length) {
@@ -47,15 +48,14 @@ class DynamicArray implements ListDemo {
     }
 
 
-
     public Object delete(int index) {
         Object a = arr[index];
         for (int i = index + 1; i < size; i++) {
             arr[i - 1] = arr[i];
         }
-            size--;
-            return a;
-        }
+        size--;
+        return a;
+    }
 
     @Override
     public boolean delete(Object value) {
@@ -81,12 +81,12 @@ class DynamicArray implements ListDemo {
         return false;
     }
 
-    public Object set(int index,Object value){
+    public Object set(int index, Object value) {
         return null;
     }
 
     public int size() {
-    return size;
+        return size;
     }
 
     @Override

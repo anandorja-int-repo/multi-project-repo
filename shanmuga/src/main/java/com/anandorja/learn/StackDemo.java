@@ -1,7 +1,9 @@
 package com.anandorja.learn;
+
 import java.util.*;
+
 public class StackDemo {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ArrayStack stack = new ArrayStack();
 
         stack.push(5);

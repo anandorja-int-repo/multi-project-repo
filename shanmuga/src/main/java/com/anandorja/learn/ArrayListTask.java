@@ -1,3 +1,5 @@
+package com.anandorja.learn;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
@@ -22,7 +24,7 @@ class ArrayListTask {
         task.addItems(lList);
         task.calculateTime(lList);
         task.removeItems(lList);
-        
+
     }
 
     private void calculateTime(List<Integer> arrayList) {
@@ -40,9 +42,10 @@ class ArrayListTask {
 
         }
     }
-    private void removeItems(List <Integer> items) {
+
+    private void removeItems(List<Integer> items) {
         items.remove(0);
-        
-    }    
-    
+
+    }
+
 }
