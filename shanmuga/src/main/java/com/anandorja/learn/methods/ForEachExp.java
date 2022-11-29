@@ -1,10 +1,10 @@
-package com.anandorja.learn.oop;
+package com.anandorja.learn.methods;
 
 public class ForEachExp {
     public int example(){
-        int arr[] = {8,7,71,3,2};
-    for (j:arr){
-        System.out
+        int arr[] = {8,7,1,3,2};
+    for (int j:arr){
+        return j;
     }
         return 0;
     }
