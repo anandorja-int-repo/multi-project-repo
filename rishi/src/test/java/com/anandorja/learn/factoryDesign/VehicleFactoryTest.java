@@ -2,10 +2,10 @@ package com.anandorja.learn.factoryDesign;
 
 import junit.framework.TestCase;
 
-public class FactoryVehicleTest extends TestCase {
+public class VehicleFactoryTest extends TestCase {
 
     public void testGetVehicle() {
-        FactoryVehicle fv = new FactoryVehicle();
+        VehicleFactory fv = new VehicleFactory();
         String carShow = fv.getVehicle("Car").show();
         String bikeShow = fv.getVehicle("Bike").show();
         String truckShow = fv.getVehicle("Truck").show();
