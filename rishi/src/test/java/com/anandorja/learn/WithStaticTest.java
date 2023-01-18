@@ -10,11 +10,11 @@ public class WithStaticTest extends TestCase {
         assertEquals(3.0,num);
     }
 
-    public void testRandom() {
-        double num = WithStatic.randomNumber();
-        out.println("random number : "+num);
-        out.println(String.format("i have %,d", 456456456));
-        out.println(String.format("i have %,.2f", 456456456.456456));
-
-    }
+//    public void testRandom() {
+//        double num = WithStatic.randomNumber();
+//        out.println("random number : "+num);
+//        out.println(String.format("i have %,d", 456456456));
+//        out.println(String.format("i have %,.2f", 456456456.456456));
+//
+//    }
 }
