@@ -16,7 +16,7 @@
     </dependency>
   </dependencies>
   <modules>  
-    <module>shanmuga</module>
+    <!--module>shanmuga</module-->
     <module>rishi</module>
     <module>bharath</module>
   </modules>
